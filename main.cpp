@@ -2,7 +2,6 @@
 #include <String>
 using namespace std;
 
-
 int main() {
     cout << "Please enter login Credentials" << endl;
     cout << "Username:";
