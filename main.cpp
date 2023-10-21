@@ -1,5 +1,6 @@
 #include <iostream>
-#include <String>
+#include <string>
+#include <fstream>
 using namespace std;
 
 int main() {
@@ -11,5 +12,18 @@ int main() {
     cout << "Password:";
     cin >> Pword;
     cout << "\nUsername:" << Uname << "\nPassword:" << Pword << endl;
+
+    string myText;
+    ifstream MyFile(Uname+".txt");
+    MyFile >> myText;
+    cout << myText;
+    if(Pword == myText){
+        cout << "Access granted";
+    }
+    else{
+        cout << "Access Denied";
+    }
+    MyFile.close();
+
     return 0;
 }
