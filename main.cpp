@@ -14,7 +14,8 @@ int main() {
     cout << "\nUsername:" << Uname << "\nPassword:" << Pword << endl;
 
     string myText;
-    ifstream MyFile(Uname+".txt");
+    string name = (Uname+".txt");
+    ifstream MyFile(name);
     MyFile >> myText;
     cout << myText;
     if(Pword == myText){
